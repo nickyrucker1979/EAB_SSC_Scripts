@@ -1,0 +1,53 @@
+SELECT EMPLID
+       , COUNTRY_NM_FORMAT
+       , NAME
+       , NAME_INITIALS
+       , NAME_PREFIX
+       , NAME_SUFFIX
+       , NAME_ROYAL_PREFIX
+       , NAME_ROYAL_SUFFIX
+       , NAME_TITLE
+       , LAST_NAME
+       , FIRST_NAME
+       , MIDDLE_NAME
+       , SECOND_LAST_NAME
+       , PREF_FIRST_NAME
+       , NAME_DISPLAY
+       , NAME_FORMAL
+       , CAMPUS_ID
+       , COUNTRY
+       , ADDRESS1
+       , ADDRESS2
+       , CITY
+       , COUNTY
+       , STATE
+       , POSTAL
+       , GEO_CODE
+       , IN_CITY_LIMIT
+       , COUNTRY_CODE
+       , PHONE
+       , EXTENSION
+       , VA_BENEFIT
+       , DEATH_CERTIF_NBR
+       , FERPA
+       , PLACE_OF_DEATH
+       , US_WORK_ELIGIBILTY
+       , MILITARY_STATUS
+       , CITIZEN_PROOF1
+       , SEX
+       , MAR_STATUS
+       , MAR_STATUS_DT
+       , BIRTHDATE
+       , BIRTHCOUNTRY
+       , BIRTHSTATE
+       , DT_OF_DEATH
+  
+FROM PS_PERSONAL_DATA
+
+WHERE 1=1
+   AND (EMPLID IN (SELECT DISTINCT EMPLID FROM PS_EMPLOYEES
+                     WHERE BUSINESS_UNIT = '')
+        OR EMPLID IN (SELECT DISTINCT EMPLID FROM PS_STDNT_CAR_TERM
+                        WHERE INSTITUTION = ''))
+
+--ORDER BY EMPLID

@@ -1,0 +1,16 @@
+SELECT SETID
+       , DEPTID
+       , EFFDT
+       , EFF_STATUS
+       , DESCR
+       , DESCRSHORT
+       , COMPANY
+       , SETID_LOCATION
+       , LOCATION
+
+FROM PS_DEPT_TBL
+
+WHERE 1=1
+   AND SETID = ''
+
+ORDER BY DEPTID, EFFDT

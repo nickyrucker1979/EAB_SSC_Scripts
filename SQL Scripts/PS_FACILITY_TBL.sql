@@ -1,0 +1,24 @@
+SELECT SETID
+       , FACILITY_ID
+       , EFFDT
+       , EFF_STATUS
+       , BLDG_CD
+       , ROOM
+       , DESCR
+       , DESCRSHORT
+       , FACILITY_TYPE
+       , FACILITY_GROUP
+       , LOCATION
+       , ROOM_CAPACITY
+       , GENERL_ASSIGN
+       , ACAD_ORG
+       , FACILITY_PARTITION
+       , MIN_UTLZN_PCT
+       , FACILITY_CONFLICT
+       , EXT_SA_FACILITY_ID
+
+FROM PS_FACILITY_TBL
+
+WHERE 1=1
+
+ORDER BY FACILITY_ID

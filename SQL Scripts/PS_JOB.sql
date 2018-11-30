@@ -1,0 +1,27 @@
+SELECT EMPLID
+       , EMPL_RCD
+       , EFFDT
+       , EFFSEQ
+       , PER_ORG
+       , DEPTID
+       , JOBCODE
+       , POSITION_NBR
+       , EMPL_STATUS
+       , ACTION
+       , ACTION_DT
+       , ACTION_REASON
+       , LOCATION
+       , FULL_PART_TIME
+       , EMPL_TYPE
+       , EMPL_CLASS
+       , REG_REGION
+
+FROM PS_JOB
+
+WHERE 1=1
+   AND (EMPLID IN (SELECT DISTINCT EMPLID FROM PS_EMPLOYEES
+                     WHERE BUSINESS_UNIT = '')
+        OR EMPLID IN (SELECT DISTINCT EMPLID FROM PS_STDNT_CAR_TERM
+                        WHERE INSTITUTION = ''))
+
+--ORDER BY EMPLID, EFFDT

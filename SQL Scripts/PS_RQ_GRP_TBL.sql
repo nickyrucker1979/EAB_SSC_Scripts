@@ -1,0 +1,29 @@
+SELECT RQRMNT_GROUP
+       , EFFDT
+       , EFF_STATUS
+       , DESCR
+       , DESCRSHORT
+       , RQRMNT_USEAGE
+       , INSTITUTION
+       , ACAD_CAREER
+       , ACAD_GROUP
+       , ACAD_PROG
+       , ACAD_PLAN
+       , ACAD_SUB_PLAN
+       , SUBJECT
+       , CATALOG_NBR
+       , RQRMNT_LIST_SEQ
+       , RQ_CONNECT_TYPE
+       , CREDIT_INCL_MODE
+       , RQ_REPORTING
+       , TEST_ID
+       , TEST_COMPONENT
+       , SCORE
+       , DESCRLONG
+
+FROM PS_RQ_GRP_TBL
+
+WHERE 1=1
+   AND INSTITUTION = ''
+
+ORDER BY RQRMNT_GROUP

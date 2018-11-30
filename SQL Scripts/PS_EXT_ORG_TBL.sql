@@ -1,0 +1,19 @@
+SELECT EXT_ORG_ID
+       , EFFDT
+       , EFF_STATUS
+       , EXT_ORG_TYPE
+       , DESCR
+       , DESCR50
+       , DESCRSHORT
+       , ORG_CONTACT
+       , ORG_LOCATION
+       , ORG_DEPARTMENT
+       , PROPRIETORSHIP
+       , SETID
+       , LASTUPDDTTM
+
+FROM PS_EXT_ORG_TBL
+
+WHERE 1=1
+
+ORDER BY EXT_ORG_ID, EFFDT

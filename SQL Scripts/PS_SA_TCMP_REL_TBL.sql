@@ -1,0 +1,13 @@
+SELECT TEST_ID
+       , EFFDT
+       , TEST_COMPONENT
+       , DESCR
+       , DESCRSHORT
+       , MAX_SCORE
+       , MIN_SCORE
+
+FROM PS_SA_TCMP_REL_TBL
+
+WHERE 1=1
+
+ORDER BY TEST_ID, EFFDT

@@ -1,0 +1,25 @@
+SELECT INSTITUTION
+       , ACAD_PLAN
+       , EFFDT
+       , EFF_STATUS
+       , DESCR
+       , DESCRSHORT
+       , ACAD_PLAN_TYPE
+       , ACAD_PROG
+       , PLN_REQTRM_DFLT
+       , DEGREE
+       , DIPLOMA_DESCR
+       , TRNSCR_DESCR
+       , FIRST_TERM_VALID
+       , CIP_CODE
+       , HEGIS_CODE
+       , ACAD_CAREER
+       , TRANSCRIPT_LEVEL
+       , DESCRLONG
+
+FROM PS_ACAD_PLAN_TBL
+
+WHERE 1=1
+   AND INSTITUTION = ''
+
+ORDER BY ACAD_PLAN, EFFDT

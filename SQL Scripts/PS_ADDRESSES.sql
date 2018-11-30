@@ -1,0 +1,26 @@
+SELECT EMPLID
+       , ADDRESS_TYPE
+       , EFFDT
+       , EFF_STATUS
+       , COUNTRY
+       , ADDRESS1
+       , ADDRESS2
+       , ADDRESS3
+       , ADDRESS4
+       , CITY
+       , COUNTY
+       , STATE
+       , POSTAL
+       , GEO_CODE
+       , IN_CITY_LIMIT
+       , REG_REGION
+
+FROM PS_ADDRESSES
+
+WHERE 1=1
+   AND (EMPLID IN (SELECT DISTINCT EMPLID FROM PS_EMPLOYEES
+                     WHERE BUSINESS_UNIT = '')
+        OR EMPLID IN (SELECT DISTINCT EMPLID FROM PS_STDNT_CAR_TERM
+                        WHERE INSTITUTION = ''))
+
+ORDER BY EMPLID, ADDRESS_TYPE, EFFDT

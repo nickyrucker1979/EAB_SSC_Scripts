@@ -1,0 +1,26 @@
+SELECT INSTITUTION
+       , EFFDT
+       , EFF_STATUS
+       , DESCR
+       , DESCRSHORT
+       , DESCRFORMAL
+       , COUNTRY
+       , ADDRESS1
+       , ADDRESS2
+       , ADDRESS3
+       , ADDRESS4
+       , CITY
+       , COUNTY
+       , STATE
+       , POSTAL
+       , GEO_CODE
+       , GRADING_SCHEME
+       , GRADING_BASIS
+       , GRADING_BASIS_SCH
+       , CAMPUS
+
+FROM PS_INSTITUTION_TBL
+
+WHERE 1=1
+
+ORDER BY INSTITUTION, EFFDT

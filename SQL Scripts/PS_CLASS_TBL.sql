@@ -1,0 +1,43 @@
+SELECT CRSE_ID
+       , CRSE_OFFER_NBR
+       , STRM
+       , SESSION_CODE
+       , CLASS_SECTION
+       , INSTITUTION
+       , ACAD_GROUP
+       , SUBJECT
+       , CATALOG_NBR
+       , ACAD_CAREER
+       , DESCR
+       , CLASS_NBR
+       , SSR_COMPONENT
+       , ENRL_STAT
+       , CLASS_STAT
+       , CLASS_TYPE
+       , ASSOCIATED_CLASS
+       , WAITLIST_DAEMON
+       , AUTO_ENRL_WAITLIST
+       , ENRL_CAP
+       , WAIT_CAP
+       , MIN_ENRL
+       , ENRL_TOT
+       , WAIT_TOT
+       , CRS_TOPIC_ID
+       , ACAD_ORG
+       , NEXT_STDNT_POSITIN
+       , CAMPUS
+       , LOCATION
+       , INSTRUCTION_MODE
+       , EQUIV_CRSE_ID
+       , ROOM_CAP_REQUEST
+       , START_DT
+       , END_DT
+       , CANCEL_DT
+       , HOLIDAY_SCHEDULE
+
+FROM PS_CLASS_TBL
+
+WHERE 1=1
+   AND INSTITUTION = ''
+
+ORDER BY SUBJECT, CATALOG_NBR, STRM, CLASS_SECTION

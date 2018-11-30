@@ -1,0 +1,56 @@
+SELECT INSTITUTION
+       , ACAD_PROG
+       , EFFDT
+       , EFF_STATUS
+       , DESCR
+       , DESCRSHORT
+       , ACAD_CAREER
+       , ACAD_CALENDAR_ID
+       , ADVISOR_EDIT
+       , LEVEL_LOAD_RULE
+       , ACAD_GROUP
+       , ACAD_PLAN
+       , CAMPUS
+       , FIRST_TERM_VALID
+       , FA_ELIGIBILITY
+       , PROG_NORM_COMPLTN
+       , RESIDENCY_REQ
+       , CIP_CODE
+       , HEGIS_CODE
+       , ACAD_ORG
+       , ACAD_PROG_DUAL
+       , GRADING_SCHEME
+       , GRADING_BASIS
+       , GRADE_TRANSFER
+       , TRANSCRIPT_LEVEL
+       , ACAD_STDNG_RULE
+       , ASSOC_PROG_AS
+       , INCOMPLETE_GRADE
+       , LAPSE_GRADE
+       , LAPSE_TO_GRADE
+       , LAPSE_DAYS
+       , LAPSE_NOTE_ID
+       , REPEAT_RULE
+       , REPEAT_GRD_CK
+       , CANCEL_REASON
+       , WD_WO_PEN_REASON
+       , WD_W_PEN_GRD_BAS
+       , WD_W_PEN_GRADE
+       , WD_W_PEN2_GRADE
+       , WD_W_PEN2_GRD_BAS
+       , DROP_RET_RSN
+       , DROP_PEN_GRADE
+       , DROP_PEN_GRADE_2
+       , DROP_PEN_GRD_BAS
+       , DROP_PEN_GRD_BAS_2
+       , REPEAT_ENRL_CTL
+       , REPEAT_ENRL_SUSP
+       , REPEAT_GRD_SUSP
+       , REPEAT_CRSE_ERROR
+       
+FROM PS_ACAD_PROG_TBL
+
+WHERE 1=1
+   AND INSTITUTION = ''
+
+ORDER BY ACAD_PROG, EFFDT

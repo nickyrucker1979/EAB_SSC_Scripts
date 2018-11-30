@@ -1,0 +1,37 @@
+SELECT RQRMNT_GROUP
+       , EFFDT
+       , RQ_LINE_KEY_NBR
+       , RQ_GRP_LINE_NBR
+       , RQ_GRP_LINE_TYPE
+       , MIN_UNITS_REQD
+       , MIN_CRSES_REQD
+       , REQUISITE_TYPE
+       , REQUIREMENT
+       , CONDITION_CODE
+       , CONDITION_OPERATOR
+       , CONDITION_DATA
+       , INSTITUTION
+       , ACAD_GROUP
+       , SUBJECT
+       , CATALOG_NBR
+       , CRSE_ID
+       , TRNSFR_LVL_ALLOWD
+       , TEST_CRDT_ALLOWD
+       , OTHR_CRDT_ALLOWD
+       , INCL_GPA_REQ
+       , UNITS_MINIMUM
+       , INCLUDE_EQUIVALENT
+       , STRM
+       , ASSOCIATED_CLASS
+       , CRS_TOPIC_ID
+       , RQ_CONNECT
+       , TEST_ID
+       , TEST_COMPONENT
+       , SCORE
+
+FROM PS_RQ_GRP_DETL_TBL
+
+WHERE 1=1
+   AND INSTITUTION = ''
+
+ORDER BY RQRMNT_GROUP
